@@ -1,7 +1,12 @@
+import sys
+
 def task2():
 
-    coordinates_of_the_center = 'center.txt'
-    coordinate_of_the_points = 'points.txt'
+    if len(sys.argv) != 3:
+        print('Введите: python tast2.py center.txt points.txt')
+
+    coordinates_of_the_center = sys.argv[1]
+    coordinate_of_the_points = sys.argv[2]
 
     with open(coordinates_of_the_center, 'r') as file:
         x, y = map(float, file.readline().split())
